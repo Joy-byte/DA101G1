@@ -1,0 +1,7 @@
+
+ ResultSet rs2 = stmt.executeQuery("select count(*) as count from EMP2");
+          rs2.next();
+          int len2=rs2.getInt("count");
+          System.out.println("※全部資料共"+len2+"筆"+" [直接下SQL指令的方式]");
+          
+          "SELECT  L.itinerary_no, L.landscape_no, N.landscape_name FROM (select itinerary_no,landscape_no from itinerary_detail where itinerary_no in(select itinerary_no from (select rownum no,itinerary_no from itinerary) where no>=(select count(*)from itinerary)-3)) L JOIN (select landscape_name,landscape_no from landscape where landscape_no in(select landscape_no from itinerary_detail where itinerary_no in(select itinerary_no from (select rownum no,itinerary_no from itinerary) where no>=(select count(*)from itinerary)-3)))N ON( L.landscape_no = N.landscape_no) order by L.itinerary_no DESC ";

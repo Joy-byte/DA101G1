@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" metadata-complete="false" version="3.0">
+  <display-name>TeamAceMVC</display-name>
+  
+  <servlet>
+    <servlet-name>MemberLogin</servlet-name>
+    <servlet-class>com.mem.controller.MemberLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemberLogin</servlet-name>
+    <url-pattern>/front-end/member/MemberLogin.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>MemberLogout</servlet-name>
+    <servlet-class>com.mem.controller.MemberLogout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemberLogin</servlet-name>
+    <url-pattern>/front-end/home/MemberLogout.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MemberAdd</servlet-name>
+    <servlet-class>com.mem.controller.MemberAdd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemberAdd</servlet-name>
+    <url-pattern>/front-end/member/MemberAdd.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LandscapeServlet</servlet-name>
+    <servlet-class>com.landscape.controller.LandscapeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LandscapeServlet</servlet-name>
+        <url-pattern>/LandscapeServlet.do</url-pattern>
+    	<url-pattern>/back-end/landscape/LandscapeServlet.do</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>ItineraryServlet</servlet-name>
+    <servlet-class>com.itinerary.controller.ItineraryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ItineraryServlet</servlet-name>
+        <url-pattern>/front-end/home/ItineraryServlet.do</url-pattern>
+    	<url-pattern>/front-end/itinerary/ItineraryServlet.do</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>ItineraryServlet</servlet-name>
+        <url-pattern>/front-end/guidetour/ItineraryServlet.do</url-pattern>
+        <url-pattern>/front-end/member/ItineraryServlet.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>ItineraryStartServlet</servlet-name>
+    <servlet-class>com.itineraryStart.controller.ItineraryStartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ItineraryStartServlet</servlet-name>
+        <url-pattern>/front-end/member/ItineraryStartServlet.do</url-pattern>
+    	<url-pattern>/front-end/home/ItineraryStartServlet.do</url-pattern>
+  </servlet-mapping>
+  
+
+  
+  
+    <servlet>
+    <servlet-name>Itinerary_trackServlet</servlet-name>
+    <servlet-class>com.itinerary_track.controller.Itinerary_trackServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Itinerary_trackServlet</servlet-name>
+        <url-pattern>/front-end/home/Itinerary_trackServlet.do</url-pattern>
+    	<url-pattern>/front-end/itinerary/Itinerary_trackServlet.do</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>Itinerary_trackServlet</servlet-name>
+        <url-pattern>/front-end/member/Itinerary_trackServlet.do</url-pattern>
+  </servlet-mapping>
+  
+  
+     <servlet>
+    <servlet-name>MemReader</servlet-name>
+    <servlet-class>com.mem.controller.MemReader</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemReader</servlet-name>
+        <url-pattern>/front-end/game/MemReader.do</url-pattern>
+        <url-pattern>/front-end/home/MemReader.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MemReader</servlet-name>
+        <url-pattern>/front-end/member/MemReader.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PictureReader</servlet-name>
+    <servlet-class>com.picture.controller.PictureReader</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PictureReader</servlet-name>
+        <url-pattern>/front-end/guidetour/PictureReader.do</url-pattern>
+    	<url-pattern>/front-end/home/PictureReader.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+   <servlet>
+    <servlet-name>ItdReader</servlet-name>
+    <servlet-class>com.itinerary_detail.controller.ItdReader</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ItdReader</servlet-name>
+        <url-pattern>/front-end/member/ItdReader.do</url-pattern>
+    	<url-pattern>/front-end/home/ItdReader.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+		<servlet-name>ShoppingServlet</servlet-name>
+		<servlet-class>com.product.controller.ShoppingServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShoppingServlet</servlet-name>
+		<url-pattern>/front-end/ShoppingServlet.do</url-pattern>
+		<url-pattern>/ShoppingServlet.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ShoppingServlet</servlet-name>
+		<url-pattern>/ShoppingServlet</url-pattern>
+	</servlet-mapping>
+<servlet>
+		<servlet-name>PhotoReader3</servlet-name>
+		<servlet-class>com.product.controller.PhotoReader3</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PhotoReader3</servlet-name>
+		<url-pattern>/front-end/product/PhotoReader3.do</url-pattern>
+		<url-pattern>/PhotoReader3.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PhotoReader4</servlet-name>
+		<servlet-class>com.product.controller.PhotoReader4</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PhotoReader4</servlet-name>
+		<url-pattern>/PhotoReader4</url-pattern>
+		<url-pattern>/PhotoReader4.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PhotoReader4</servlet-name>
+		<url-pattern>/front-end/product/PhotoReader4.do</url-pattern>
+		<url-pattern>/front-end/member/PhotoReader4.do</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>addItinerary_track</servlet-name>
+		<servlet-class>com.itinerary_track.controller.Itinerary_trackServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addItinerary_track</servlet-name>
+		<url-pattern>/front-end/Itinerary_trackServlet</url-pattern>
+	</servlet-mapping>
+	
+	 <servlet>
+    <servlet-name>GuideServlet</servlet-name>
+    <servlet-class>com.guide.controller.GuideServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GuideServlet</servlet-name>
+    <url-pattern>/front-end/guide/guide.do</url-pattern>
+    <url-pattern>/back-end/guide/guide.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ReadPicture</servlet-name>
+    <servlet-class>com.guide.controller.ReadPicture2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadPicture</servlet-name>
+    <url-pattern>/front-end/guide/ReadPicture2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ReadTourPic</servlet-name>
+    <servlet-class>com.guidetour.controller.ReadTourPic</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadTourPic</servlet-name>
+    <url-pattern>/front-end/guidetour/ReadTourPic</url-pattern>
+    <url-pattern>/front-end/guide/ReadTourPic</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GuideTourServlet</servlet-name>
+    <servlet-class>com.guidetour.controller.GuideTourServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GuideTourServlet</servlet-name>
+    <url-pattern>/front-end/guidetour/GuideTour.do</url-pattern>
+    <url-pattern>/front-end/resorder/GuideTour.do</url-pattern>
+    <url-pattern>/front-end/guide/GuideTour.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ReadMemPic</servlet-name>
+    <servlet-class>com.mem.controller.ReadMemPic</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadMemPic</servlet-name>
+    <url-pattern>/front-end/guidetour/ReadMemPic</url-pattern>
+    <url-pattern>/front-end/guide/ReadMemPic</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ResOrderServlet</servlet-name>
+    <servlet-class>com.resorder.controller.ResOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResOrderServlet</servlet-name>
+    <url-pattern>/front-end/guidetour/ResOrderServlet</url-pattern>
+    <url-pattern>/front-end/resorder/ResOrderServlet</url-pattern>
+    <url-pattern>/front-end/guide/ResOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GuideReportServlet</servlet-name>
+    <servlet-class>com.guidereport.controller.GuideReportServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GuideReportServlet</servlet-name>
+    <url-pattern>/front-end/guidetour/GuideReportServlet</url-pattern>
+    <url-pattern>/back-end/guidereport/GuideReportServlet</url-pattern>
+  </servlet-mapping>
+	
+	
+	
+	
+	
+<servlet>
+		<servlet-name>AdminLogin</servlet-name>
+		<servlet-class>com.administrator.controller.AdminLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminLogin</servlet-name>
+		<url-pattern>/back-end/AdminLogin.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>AdminServlet</servlet-name>
+		<servlet-class>com.administrator.controller.AdminServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminServlet</servlet-name>
+		<url-pattern>/back-end/admin.do</url-pattern>
+	</servlet-mapping>	
+	
+<!-- 	<servlet> -->
+<!-- 		<servlet-name>MerchantServlet</servlet-name> -->
+<!-- 		<servlet-class>com.merchant.controller.MerchantServlet</servlet-class> -->
+<!-- 	</servlet> -->
+<!-- 	<servlet-mapping> -->
+<!-- 		<servlet-name>MerchantServlet</servlet-name> -->
+<!-- 		<url-pattern>/front-end/merchant/Index/MerchantServlet.do</url-pattern> -->
+<!-- 	</servlet-mapping> -->
+
+	<filter>
+		<filter-name>loginFilter</filter-name>
+		<filter-class>filters.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>loginFilter</filter-name>
+		<url-pattern>/front-end/itinerary/*</url-pattern>
+		<url-pattern>/front-end/game/*</url-pattern>
+		<url-pattern>/front-end/guide/*</url-pattern>
+		<url-pattern>/front-end/resorder/*</url-pattern>
+		<url-pattern>/front-end/guidetour/*</url-pattern>
+<!-- 		<url-pattern>/back-end/portal/*</url-pattern> -->
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+		<dispatcher>ASYNC</dispatcher>
+	</filter-mapping>
+</web-app>

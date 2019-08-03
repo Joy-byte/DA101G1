@@ -1,0 +1,53 @@
+	    var btnID='#page1';
+	    $(btnID).css("background-color",'#eee');
+	    $(".page-link").click(function(){
+// 	    	$('#columns').fadeOut('2500');
+			if($(this).text() != $('#prePage').text()+"Previous" && $(this).text() != $('#nextPage').text()+"Next"){
+				$(btnID).css("background-color",'#fff');
+				$(this).css("background-color",'#eee');
+				btnID = '#'+$(this).attr('id');
+			}else if($(this).text() == $('#prePage').text()+"Previous"){
+				$('#page'+page).css("background-color",'#fff');
+				$('#page'+(page-1)).css("background-color",'#eee');
+				btnID = '#page'+(page-1);
+			}else{
+				$('#page'+page).css("background-color",'#fff');
+				$('#page'+(page+1)).css("background-color",'#eee');
+				btnID = '#page'+(page+1);
+			}
+	    	document.getElementById('columns').innerText=""
+	    	if($(this).text() == $('#prePage').text()+"Previous"){
+	    		if(page!=1){
+	    			page = page-1;
+	    		}
+	    	}else if($(this).text() == $('#nextPage').text()+"Next"){
+	    		if(page!=pageNumber){
+	    			page = page+1;
+	    		}
+	    	}else{
+	    		page = $(this).text();	
+	    	}
+	    	$.each(array, function(i, item){
+	    		if(page==pageNumber){
+	    			if(i>=indexArray[page-1]){
+		    			jqueryAppend(item);
+		    		};
+	    		}else{
+	    			if(i>=indexArray[page-1] && i<indexArray[page]){
+		    			jqueryAppend(item);
+		    		};	
+	    		}
+	    	});
+	    	$('#columns').fadeIn('2500');
+	    });
+	    
+	    function btnchange(){
+			if('${param.whichPage}' == ''){
+				document.getElementById('whichPage1').style.backgroundColor='#eee';
+			}else if('${param.whichPage}'==1){
+				document.getElementById('whichPage${param.whichPage}').style.backgroundColor='#eee';	
+			}else{
+				document.getElementById('whichPage${param.whichPage-1}').style.backgroundColor='#fff';
+				document.getElementById('whichPage${param.whichPage}').style.backgroundColor='#eee';
+			}	
+		}
