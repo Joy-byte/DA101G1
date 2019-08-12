@@ -747,6 +747,8 @@ public class MerchantServlet extends HttpServlet {
 				String string = stringBuffer.toString();
 				//暫存密碼
 				jedis.set("codekey", string);
+				//設定一天過期
+				jedis.expire("codekey",86400);
 				
 				
 				 //寄信
